@@ -1,0 +1,19 @@
+def countUp(value):
+    while value < 0:
+        print(value)
+        value += 1
+
+def countDown(value):
+    while value > 0:
+        print(value)
+        value -= 1		
+		
+try:
+    value=int(raw_input('Input:'))
+except ValueError:
+    print "Not a number"
+
+if (value < 0):
+	countUp(value)
+else:
+	countDown(value)

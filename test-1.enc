@@ -1,0 +1,27 @@
+def countUp(value):
+    if value == 0: #this is the exiting recursion control, without it the program will run forever
+        print("Blastoff!")
+        return
+		
+    print(value)
+    countUp(value + 1) #this the the recursion call, you have to call the function again but changing the parameter value you are passing to
+
+def countDown(value):
+
+    if value == 0:
+	    print("Blastoff!")
+        return
+		
+    print(value)
+    countDown(value - 1)
+
+
+try:
+    value=int(raw_input('Input:'))
+except ValueError:
+    print "Not a number"
+
+if (value < 0):
+	countUp(value)
+else:
+	countDown(value)

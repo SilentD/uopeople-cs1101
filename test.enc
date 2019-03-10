@@ -1,0 +1,25 @@
+def countUp(value):
+    if value == 0:
+        return
+		
+    print(value)
+    countUp(value + 1)
+
+def countDown(value):
+
+    if value == 0:
+	    return
+		
+    print(value)
+    countDown(value - 1)
+
+
+try:
+    value=int(raw_input('Input:'))
+except ValueError:
+    print "Not a number"
+
+if (value < 0):
+	countUp(value)
+else:
+	countDown(value)
